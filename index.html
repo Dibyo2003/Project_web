@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Immersia 360 | Future of Campus Tours</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="bg-mesh"></div>
+  <div class="noise-overlay"></div>
+  <div class="mouse-glow"></div>
+
+  <nav class="glass-nav">
+    <div class="logo-container">
+      <img src="logo.png" alt="Immersia Logo" class="nav-logo">
+      <span class="nav-brand">Immersia 360</span>
+    </div>
+  </nav>
+
+  <div id="loader-wrapper" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #020617; z-index: 9999; display: flex; align-items: center; justify-content: center; transition: opacity 0.5s;">
+    <div class="loader-content">
+        <img src="logo.png" class="loader-icon" alt="Loading...">
+        <div style="color: var(--cyan); font-family: monospace; letter-spacing: 3px;">INITIALIZING SYSTEM...</div>
+    </div>
+  </div>
+
+  <main>
+    <section class="hero">
+      <div class="hero-container">
+        <div class="hero-glass" data-tilt data-tilt-max="3" data-tilt-speed="400" data-tilt-glare="true" data-tilt-max-glare="0.1">
+          <p class="subtitle">Next-Gen Digital Twin</p>
+          <h1>Experience Campus<br>Like Never Before.</h1>
+          <div class="hero-desc">
+            <p>Immersia 360 is a modern Digital Twin application providing an immersive, interactive, and realistic virtual representation of the Techno Institute of Engineering & Management campus.</p>
+            <p style="margin-top: 10px;">Unlike traditional galleries, Immersia 360 places users inside a 360-degree virtual environment, enabling free exploration and navigation.</p>
+          </div>
+          <div class="highlight-box">
+            Demonstrating the practical application of computer graphics, WebGL, VR concepts, and interactive software design.
+          </div>
+        </div>
+        <div class="hero-visual">
+          <img src="vr2.png" class="vr-float" alt="VR Headset">
+        </div>
+      </div>
+    </section>
+
+    <section class="section reveal">
+      <div class="section-header">
+        <h2>Process Workflow</h2>
+        <div class="divider"></div>
+      </div>
+      <div class="workflow-grid">
+        <div class="step-card" data-workflow="capture">
+          <div class="step-icon">📸</div>
+          <div><h3>Capture</h3><p>High-res 360° imaging via Insta360 X3.</p><button class="btn-small">Details</button></div>
+        </div>
+        <div class="step-card" data-workflow="stitching">
+          <div class="step-icon">🧩</div>
+          <div><h3>Processing</h3><p>Optical Flow stitching & 8K optimization.</p><button class="btn-small">Details</button></div>
+        </div>
+        <div class="step-card" data-workflow="unity">
+          <div class="step-icon">🎮</div>
+          <div><h3>Unity Integration</h3><p>Waypoint logic & texture projection.</p><button class="btn-small">Details</button></div>
+        </div>
+        <div class="step-card" data-workflow="web">
+          <div class="step-icon">🌐</div>
+          <div><h3>Web Deploy</h3><p>React Three Fiber & CI/CD.</p><button class="btn-small">Details</button></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reveal">
+      <div class="section-header">
+        <h2>Technology Stack</h2>
+        <div class="divider"></div>
+      </div>
+      <div class="grid-3">
+        <div class="glass-card">
+          <img src="icons/insta360.png" class="tech-icon" alt="Insta360">
+          <h3>Insta360 X3</h3>
+          <p style="color: var(--text-muted);">Panoramic Capture Hardware</p>
+        </div>
+        <div class="glass-card">
+          <img src="icons/react.png" class="tech-icon" alt="React">
+          <h3>React</h3>
+          <p style="color: var(--text-muted);">Interactive UI Library</p>
+        </div>
+        <div class="glass-card">
+          <img src="icons/unity.png" class="tech-icon" alt="Unity">
+          <h3>Unity 3D</h3>
+          <p style="color: var(--text-muted);">Physics & Simulation Engine</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reveal">
+      <div class="section-header">
+        <h2>Development Team</h2>
+        <div class="divider"></div>
+      </div>
+      <div class="grid-team">
+        <div class="glass-card">
+          <div class="team-layout">
+            <div class="team-left">
+              <img src="images/members/m1.jpg" class="avatar" alt="Prottoy">
+              <span class="role-tag">Team Lead</span>
+              <h3>Prottoy</h3>
+              <p style="font-size: 0.85rem; margin-top: 5px;">B.Tech CSE (AIML)</p>
+            </div>
+            <div class="team-right">
+              <div class="contact-row"><span class="contact-icon">✉️</span> example@college.edu</div>
+              <div class="contact-row"><span class="contact-icon">📞</span> +91 98765 43210</div>
+              <div class="social-links">
+                <a href="#" class="social-link">LinkedIn</a>
+                <a href="#" class="social-link">GitHub</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="glass-card">
+          <div class="team-layout">
+            <div class="team-left">
+              <img src="images/members/m2.jpg" class="avatar" alt="Sayantan">
+              <span class="role-tag">Unity Dev</span>
+              <h3>Sayantan</h3>
+              <p style="font-size: 0.85rem; margin-top: 5px;">B.Tech CSE (AIML)</p>
+            </div>
+            <div class="team-right">
+              <div class="contact-row"><span class="contact-icon">✉️</span> example@college.edu</div>
+              <div class="contact-row"><span class="contact-icon">📞</span> +91 98765 43210</div>
+              <div class="social-links">
+                <a href="#" class="social-link">LinkedIn</a>
+                <a href="#" class="social-link">GitHub</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="glass-card">
+          <div class="team-layout">
+            <div class="team-left">
+              <img src="images/members/m3.jpg" class="avatar" alt="Dibyojyoti">
+              <span class="role-tag">Frontend</span>
+              <h3>Dibyojyoti</h3>
+              <p style="font-size: 0.85rem; margin-top: 5px;">B.Tech CSE (AIML)</p>
+            </div>
+            <div class="team-right">
+              <div class="contact-row"><span class="contact-icon">✉️</span> example@college.edu</div>
+              <div class="contact-row"><span class="contact-icon">📞</span> +91 98765 43210</div>
+              <div class="social-links">
+                <a href="#" class="social-link">LinkedIn</a>
+                <a href="#" class="social-link">GitHub</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="glass-card">
+          <div class="team-layout">
+            <div class="team-left">
+              <img src="images/members/m4.jpg" class="avatar" alt="Subhratanay">
+              <span class="role-tag">3D Assets</span>
+              <h3>Subhratanay</h3>
+              <p style="font-size: 0.85rem; margin-top: 5px;">B.Tech CSE (AIML)</p>
+            </div>
+            <div class="team-right">
+              <div class="contact-row"><span class="contact-icon">✉️</span> example@college.edu</div>
+              <div class="contact-row"><span class="contact-icon">📞</span> +91 98765 43210</div>
+              <div class="social-links">
+                <a href="#" class="social-link">LinkedIn</a>
+                <a href="#" class="social-link">GitHub</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="glass-card">
+          <div class="team-layout">
+            <div class="team-left">
+              <img src="images/members/m5.jpg" class="avatar" alt="Sayan">
+              <span class="role-tag">Docs</span>
+              <h3>Sayan</h3>
+              <p style="font-size: 0.85rem; margin-top: 5px;">B.Tech CSE (AIML)</p>
+            </div>
+            <div class="team-right">
+              <div class="contact-row"><span class="contact-icon">✉️</span> example@college.edu</div>
+              <div class="contact-row"><span class="contact-icon">📞</span> +91 98765 43210</div>
+              <div class="social-links">
+                <a href="#" class="social-link">LinkedIn</a>
+                <a href="#" class="social-link">GitHub</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>Immersia 360 © 2025 | Techno Institute of Engineering & Management</p>
+  </footer>
+
+  <div id="workflow-modal" class="modal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); z-index: 10000; align-items: center; justify-content: center;">
+    <div class="glass-card" style="width: 90%; max-width: 500px; color: white;">
+      <span class="close-modal" style="float: right; cursor: pointer; font-size: 1.5rem;">&times;</span>
+      <div id="modal-body"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
